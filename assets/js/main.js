@@ -78,7 +78,6 @@ function reset() {
 
 function myfunction(){
 
-
 	var x = 1024; //min value
 	var y = 9999; // max value
 

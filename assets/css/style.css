@@ -30,13 +30,7 @@ h1 {
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
 
-}
-
-footer {
-
-}
 
 /******************************************
 /* ADDITIONAL STYLES
@@ -73,7 +67,7 @@ footer {
      content: '';
      width: 32px;
      height: 32px;
-     background: url('arrow-left.png') no-repeat;
+     background: url('../../images/arrow-left.png') no-repeat;
      background-size: 32px;
      right: -30px;
      top: 50%;
