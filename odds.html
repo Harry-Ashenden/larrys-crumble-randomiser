@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Odds page</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="assets/css/normalize.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+
+		<link rel="icon" href="images/web-dev-favicon.png">
+	</head>
+	<body>
+		<header>
+			<h1>Odds input</h1>
+		</header>
+
+		<section>
+			<h2>Fruit Odds</h2>
+			<form>
+				<label for="apple"> Apple: </label>
+				<input id="apple" type="number" placeholder="odds here">
+
+				<label for="rhubarb"> Rhubarb: </label>
+				<input id="rhubarb" type="number" placeholder="odds here">
+
+				<label for="peachAndCinnamon"> Peach and Cinnamon: </label>
+				<input id="peachAndCinnamon" type="number" placeholder="odds here">
+
+				<label for="mincePie"> Mince Pie: </label>
+				<input id="mincePie" type="number" placeholder="odds here">
+			</form>
+
+			<button id="fruitSubmit" type="button" name="button">Submit Fruit Odds</button>
+
+			<h2 id="fruitSuccessMessage"></h2>
+		</section>
+
+		<section>
+			<h2>Crumb Odds</h2>
+			<form>
+				<label for="crumble"> Crumble: </label>
+				<input id="crumble" type="number" placeholder="odds here">
+
+				<label for="oats"> Oats: </label>
+				<input id="oats" type="number" placeholder="odds here">
+			</form>
+
+			<button id="crumbSubmit" type="button" name="button">Submit Crumb Odds</button>
+
+			<h2 id="crumbSuccessMessage"></h2>
+		</section>
+
+		<section>
+			<h2>Topping Odds</h2>
+			<form>
+				<label for="custard"> Custard: </label>
+				<input id="custard" type="number" placeholder="odds here">
+
+				<label for="whippedCream"> Whipped Cream: </label>
+				<input id="whippedCream" type="number" placeholder="odds here">
+
+				<label for="brandySauce"> Brandy Sauce: </label>
+				<input id="brandySauce" type="number" placeholder="odds here">
+			</form>
+
+			<button id="toppingSubmit" type="button" name="button">Submit Topping Odds</button>
+
+			<h2 id="toppingSuccessMessage"></h2>
+		</section>
+
+		<a href="index.html"><button>Home</button></a>
+
+		
+		<script type="text/javascript" src="assets/js/odds.js"></script>
+		<script type="text/javascript" src="assets/js/all.js"></script>
+		<script type="text/javascript" src="assets/js/vegan.js"></script>
+	</body>
+</html>

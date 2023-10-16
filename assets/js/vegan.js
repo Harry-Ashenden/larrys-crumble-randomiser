@@ -1,25 +1,7 @@
-//Ingredients lists
-const fruit = [
-    ["Apple", 50],
-    ["Rhubarb", 20],
-    ["Peach and Cinnamon", 15],
-    ["Mince Pie", 15],
-]
-
-const crumb = [
-    ['Crumble', 50],
-    ['Oats', 50],
- ]
-
-const topping = [
-    ['Custard', 45],
-    ['Whipped Cream', 45],
-    ['Brandy Sauce', 10],
-]
-
+// Gets current 
 
 //Runs the crumbleRandomiser function on click of the button
-document.querySelector('#randomiseCrumbles').addEventListener('click', randomiserResults)
+document.querySelector('#veganRandomise').addEventListener('click', veganResults)
 
 
 //Random percent generator 1-100%
@@ -50,27 +32,22 @@ function chance(arr) {
     }
   }
 
-
 // Runs the randomiser 3 times for each different component and outputs the result HTML
-function randomiserResults() {
+function veganResults() {
 
-    // Call the randomiser function and assigns to result variables
-    let fruitResult = chance(fruit)
-    let crumbResult = chance(crumb)
-    let toppingResult = chance(topping)
+  // Gets the current fruits odds from local stoage and converts back into 2d array
+  let currentVeganFruitOddsJSON = localStorage.getItem("Fruit Odds")
+  let currentVeganFruitOdds = JSON.parse(currentVeganFruitOddsJSON) 
 
-    // Outputs the results to the result ID in the html
-    document.querySelector('#result').innerText = `Fruit = ${fruitResult}, Crumb = ${crumbResult}, Topping = ${toppingResult}`
+  // Call the randomiser function and assigns to result variables
+  let veganFruitResult = chance(currentVeganFruitOdds)
+  let veganCrumbResult = chance(veganCrumb)
+  let veganToppingResult = chance(veganTopping)
+  
+  // Outputs the results to the result ID in the html
+  document.querySelector('#result').innerText = `Fruit = ${veganFruitResult}, Crumb = ${veganCrumbResult}, Topping = ${veganToppingResult}`
 }
 
-//Runs the reset funciton on clikc of the reset button
-document.querySelector('#reset').addEventListener('click', reset)
-
-
-// Reset button fills the results html with nothing
-function reset() {
-    document.querySelector('#result').innerText = ''
-}
 
 
 
