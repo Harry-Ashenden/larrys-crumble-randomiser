@@ -1,25 +1,5 @@
-//Ingredients lists
-// let fruit = [
-//     ["Apple", 50],
-//     ["Rhubarb", 20],
-//     ["Peach and Cinnamon", 15],
-//     ["Mince Pie", 15],
-// ]
-
-// let crumb = [
-//     ['Crumble', 50],
-//     ['Oats', 50],
-//  ]
-
-// let topping = [
-//     ['Custard', 45],
-//     ['Whipped Cream', 45],
-//     ['Brandy Sauce', 10],
-// ]
-
-
 //Runs the crumbleRandomiser function on click of the button
-document.querySelector('#randomiseCrumbles').addEventListener('click', randomiserResults)
+document.querySelector('#allRandomise').addEventListener('click', randomiserResults)
 
 
 //Random percent generator 1-100%
@@ -71,33 +51,4 @@ function randomiserResults() {
   
   // Outputs the results to the result ID in the html
   document.querySelector('#result').innerText = `Fruit = ${fruitResult}, Crumb = ${crumbResult}, Topping = ${toppingResult}`
-}
-
-//Runs the reset funciton on clikc of the reset button
-// document.querySelector('#reset').addEventListener('click', reset)
-
-
-// Reset button fills the results html with nothing
-// function reset() {
-//     document.querySelector('#result').innerText = ''
-// }
-
-
-
-// SPINNING WHEEL
-
-function myfunction(){
-
-	var x = 1024; //min value
-	var y = 9999; // max value
-
-	var deg = Math.floor(Math.random() * (x - y)) + y;
-
-	document.getElementById('box').style.transform = "rotate("+deg+"deg)";
-
-	var element = document.getElementById('mainbox');
-	element.classList.remove('animate');
-	setTimeout(function(){
-		element.classList.add('animate');
-	}, 5000); //5000 = 5 second
 }
