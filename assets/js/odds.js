@@ -18,7 +18,7 @@ let topping = [
 ]
 
 let veganCrumb = [
-  ['Oat Crumble', 100]
+  ['Oats', 100]
 ]
 
 let veganTopping = [
