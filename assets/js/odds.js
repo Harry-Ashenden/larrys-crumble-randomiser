@@ -7,18 +7,17 @@ let fruit = [
 ]
 
 let crumb = [
-  ['Crumble', 50],
-  ['Oats', 50],
+  ['Traditional Crumble', 50],
+  ['Granola', 50],
 ]
 
 let topping = [
-  ['Custard', 45],
-  ['Whipped Cream', 45],
-  ['Brandy Sauce', 10], 
+  ['Custard', 50],
+  ['Whipped Cream', 50],
 ]
 
 let veganCrumb = [
-  ['Oats', 100]
+  ['Granola', 100]
 ]
 
 let veganTopping = [
@@ -101,8 +100,8 @@ function crumbOdds() {
 
     // Updating the crumb 2d array to contain default odds
     let crumb = [
-      ['Crumble', 50],
-      ['Oats', 50],
+      ['Traditional Crumble', 50],
+      ['Granola', 50],
     ]
     
     // Converting 2d array to JSON for storage
@@ -117,17 +116,17 @@ function crumbOdds() {
   } else {
 
     // Setting inputted odds to the fruit variable
-    let crumbleValue = Number(document.querySelector('#crumble').value)
-    let oatsValue = Number(document.querySelector('#oats').value)
+    let tradCrumbleValue = Number(document.querySelector('#tradCrumble').value)
+    let granolaValue = Number(document.querySelector('#granola').value)
 
 
     // Checking for 100 as total
-    if (crumbleValue + oatsValue === 100) {
+    if (tradCrumbleValue + granolaValue === 100) {
 
       // Updating the fruit 2d array to contain inputted odds
       let crumb = [
-        ['Crumble', crumbleValue],
-        ['Oats', oatsValue],
+        ['Traditional Crumble', tradCrumbleValue],
+        ['Granola', granolaValue],
       ]
 
       // Converting 2d array to JSON for storage
@@ -137,7 +136,7 @@ function crumbOdds() {
       localStorage.setItem("Crumb Odds", crumbStorage)
 
       // Adding success message if odds add up to 100
-      document.querySelector('#crumbSuccessMessage').innerText = `Odds updated Crumble: ${crumbleValue}, Oats: ${oatsValue}`
+      document.querySelector('#crumbSuccessMessage').innerText = `Odds updated Traditional Crumble: ${tradCrumbleValue}, Granola: ${granolaValue}`
 
       // Error message when odds do not equal 100
     } else {
@@ -159,9 +158,8 @@ function toppingOdds() {
 
     // Updating the topping 2d array to contain inputted odds
     let topping = [
-      ['Custard', 40],
-      ['Whipped Cream', 40],
-      ['Brandy Sauce', 20], 
+      ['Custard', 50],
+      ['Whipped Cream', 50],
     ]
     
     // Converting 2d array to JSON for storage
@@ -178,17 +176,14 @@ function toppingOdds() {
     // Setting inputted odds to the fruit variable
     let custardValue = Number(document.querySelector('#custard').value)
     let whippedCreamValue = Number(document.querySelector('#whippedCream').value)
-    let brandySauceValue = Number(document.querySelector('#brandySauce').value)
-
 
     // Checking for 100 as total
-    if (custardValue + whippedCreamValue + brandySauceValue === 100) {
+    if (custardValue + whippedCreamValue === 100) {
 
       // Updating the fruit 2d array to contain inputted odds
       let topping = [
         ['Custard', custardValue],
         ['Whipped Cream', whippedCreamValue],
-        ['Brandy Sauce', brandySauceValue], 
       ]
 
       // Converting 2d array to JSON for storage
@@ -198,7 +193,7 @@ function toppingOdds() {
       localStorage.setItem("Topping Odds", toppingStorage)
 
       // Adding success message if odds add up to 100
-      document.querySelector('#toppingSuccessMessage').innerText = `Odds updated Custard: ${custardValue}, Whipped Cream: ${whippedCreamValue}, Brandy Sauce ${brandySauceValue}`
+      document.querySelector('#toppingSuccessMessage').innerText = `Odds updated Custard: ${custardValue}, Whipped Cream: ${whippedCreamValue}`
 
       // Error message when odds do not equal 100
     } else {
@@ -206,9 +201,3 @@ function toppingOdds() {
     }
   }
 }
-
-
-
-
-
-// potentially need a fallback option in which the randomisers still runs without manually inputted odds
