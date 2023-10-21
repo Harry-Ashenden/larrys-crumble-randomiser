@@ -37,10 +37,10 @@ function fruitOdds() {
 
     // Updating 2d fruit array and adding to local storage
     fruit = [
-      ["Apple", 50],
-      ["Rhubarb", 20],
-      ["Peach and Cinnamon", 20],
-      ["Mince Pie", 10],
+      ["Apple", 25],
+      ["Rhubarb", 25],
+      ["Peach and Cinnamon", 25],
+      ["Mince Pie", 25],
     ]
 
     // Converting 2d array to JSON for storage
