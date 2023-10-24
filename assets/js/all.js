@@ -1,5 +1,5 @@
 //Runs the crumbleRandomiser function on click of the button
-document.querySelector('#allRandomise').addEventListener('click', randomiserResults)
+document.querySelector('#allRandomise').addEventListener('click', setTimeout(randomiserResults, 5200))
 
 
 //Random percent generator 1-100%

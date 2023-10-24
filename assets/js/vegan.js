@@ -1,7 +1,7 @@
 // Gets current 
 
 //Runs the crumbleRandomiser function on click of the button
-document.querySelector('#veganRandomise').addEventListener('click', veganResults)
+document.querySelector('#veganRandomise').addEventListener('click', setTimeout(veganResults, 5200))
 
 
 //Random percent generator 1-100%
