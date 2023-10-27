@@ -1,14 +1,10 @@
-// Gets current 
-
-//Runs the crumbleRandomiser function on click of the button
-document.querySelector('#veganRandomise').addEventListener('click', setTimeout(veganResults, 5200))
-
+// creates a sleep function in js
+const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 
 //Random percent generator 1-100%
 function percentGenerator(num) {
   return Math.round(Math.ceil(Math.random() * num + (num > 0 ? 1 : 0)) - 1)
   }
-
 
 //Rigged randomiser function
 function chance(arr) {
@@ -33,22 +29,24 @@ function chance(arr) {
   }
 
 // Runs the randomiser 3 times for each different component and outputs the result HTML
-function veganResults() {
+const veganResults = async () => {
 
   // Gets the current fruits odds from local stoage and converts back into 2d array
   let currentVeganFruitOddsJSON = localStorage.getItem("Fruit Odds")
   let currentVeganFruitOdds = JSON.parse(currentVeganFruitOddsJSON) 
-
   // Call the randomiser function and assigns to result variables
   let veganFruitResult = chance(currentVeganFruitOdds)
   let veganCrumbResult = chance(veganCrumb)
   let veganToppingResult = chance(veganTopping)
   
-  // Outputs the results to the result ID in the html
-  document.querySelector('#result').innerText = `Fruit = ${veganFruitResult}, Crumb = ${veganCrumbResult}, Topping = ${veganToppingResult}`
-}
+  // Outputs the results to the result IDs in the html
+  document.querySelector('#veganFruitResult').innerText = `${veganFruitResult}`
+  document.querySelector('#veganCrumbResult').innerText = `${veganCrumbResult}`
+  document.querySelector('#veganToppingResult').innerText = `${veganToppingResult}`
+}  
 
-
+//Runs the crumbleRandomiser function on click of the button, has timeout to delay function from running until the candy cane laoding bar is complete
+document.querySelector('#veganRandomise').addEventListener('click', veganResults)
 
 
 // SPINNING WHEEL

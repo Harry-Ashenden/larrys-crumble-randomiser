@@ -1,7 +1,3 @@
-//Runs the crumbleRandomiser function on click of the button
-document.querySelector('#allRandomise').addEventListener('click', setTimeout(randomiserResults, 5200))
-
-
 //Random percent generator 1-100%
 function percentGenerator(num) {
   return Math.round(Math.ceil(Math.random() * num + (num > 0 ? 1 : 0)) - 1)
@@ -30,25 +26,26 @@ function chance(arr) {
     }
   }
 
-
 // Runs the randomiser 3 times for each different component and outputs the result HTML
-function randomiserResults() {
+const randomiserResults = async () => {
 
   // Gets the current odds from local stoage and converts back into 2d array
   let currentFruitOddsJSON = localStorage.getItem("Fruit Odds")
-  let currentFruitOdds = JSON.parse(currentFruitOddsJSON) 
-
+  let currentFruitOdds = JSON.parse(currentFruitOddsJSON)   
   let currentCrumbOddsJSON = localStorage.getItem("Crumb Odds")
-  let currentCrumbtOdds = JSON.parse(currentCrumbOddsJSON)
-
+  let currentCrumbtOdds = JSON.parse(currentCrumbOddsJSON)  
   let currentToppingOddsJSON = localStorage.getItem("Topping Odds")
-  let currentToppingOdds = JSON.parse(currentToppingOddsJSON)
+  let currentToppingOdds = JSON.parse(currentToppingOddsJSON) 
 
   // Call the randomiser function and assigns to result variables
   let fruitResult = chance(currentFruitOdds)
   let crumbResult = chance(currentCrumbtOdds)
   let toppingResult = chance(currentToppingOdds)
-  
+
   // Outputs the results to the result ID in the html
-  document.querySelector('#result').innerText = `Fruit = ${fruitResult}, Crumb = ${crumbResult}, Topping = ${toppingResult}`
-}
+  document.querySelector('#fruitResult').innerText = `${fruitResult}`
+  document.querySelector('#crumbResult').innerText = `${crumbResult}`
+  document.querySelector('#toppingResult').innerText = `${toppingResult}`}
+
+//Runs the crumbleRandomiser function on click of the button,  has timeout to delay function from running until the candy cane laoding bar is complete
+document.querySelector('#allRandomise').addEventListener('click', randomiserResults)

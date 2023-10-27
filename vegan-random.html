@@ -7,6 +7,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>Vegan Randomiser</title>
+		
+		<!-- preload background image -->
+		<link rel="preload" href="assets/css/images/christmas-background-2.jpg" as="image">
+		<link rel="preload" href="assets/css/images/larrys-grandpas-crumbles-white.png" as="image">
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="assets/css/normalize.css">
@@ -15,40 +19,40 @@
 		<!-- external JQUERY link -->
 		<script type="text/javascript" src="assets/js/jquery-3.7.1.min.js"></script>
 		
-		<link rel="icon" href="images/web-dev-favicon.png">
+		<link rel="icon" href="assets/css/images/web-dev-favicon.png">
 	</head>
 	<body>
-		<header>
-			 <!-- <img src="images/Larrys-logo.jpg.jpeg" alt="Larry's logo">  -->
-			<h1>Vegan Crumble Randomiser</h1>
+		<header class="flex">
+			<a class="reset" href="index.html"><button>Reset</button></a>
+			<img class="logo" src="assets/css/images/larrys-grandpas-crumbles-white.png" alt="Larry's logo">
 		</header>
 				
-		<section class="candy"> 
+		<!-- <section class="candy"> 
 			<section class="candyLoader">
 			</section>
-		</section>
+		</section> -->
 		
-		<section>
-			<button id="veganRandomise" type="button" name="veganRandomise">Click here for VEGAN</button>
+		<section class="randomiseButtons">
+			<button id="veganRandomise" type="button" name="veganRandomise">Random Vegan Crumble</button>
 		</section>
 
-		<!-- <section>
+		<section>
 			<div class="counter">0</div>
 			<div class="progressbar">
 				<span class="progress"></span>
 			</div>
-		</section> -->
-
-		<section>
-			<a href="index.html"><button>Reset</button></a>
 		</section>
 
-
-
-		<section>
-			<h2 id="result"></h2>
+		<section class="results">
+			<!-- <h2 id="result"></h2> -->
+			<button id="veganFruitResult" class="hidden"></button>
+			<button id="veganCrumbResult" class="hidden"></button>
+			<button id="veganToppingResult" class="hidden"></button>
 		</section>	
 
+		<section class="oddsButton">
+			<a href="odds.html"><button>odds</button></a>
+		</section>
 
 
 		<script type="text/javascript" src="assets/js/odds.js"></script>

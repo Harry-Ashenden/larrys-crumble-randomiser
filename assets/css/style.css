@@ -17,36 +17,110 @@
 	clear: both;
 }
 
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
 
 /******************************************
 /* BASE STYLES
 /*******************************************/
 
+body {
+  background: #453025 url("images/christmas-background-2.jpg");
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-size: 1349px 629px; */
+}
 h1 {
-     color: blue;
+     color: black;
 }
 
-.flex {
-  display: flex;
-}
 
-img {
-  
-}
+
+
 
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 
+a {
+  justify-content: center;
+  width: 100%;
+}
+
+img {
+  width: 55%;
+  margin-top: 15px;
+}
+
+button {
+  background-color: #ffffff00;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 40px;
+  /* font-weight: ; */
+  text-align: center;
+  margin-top: 58px;
+}
+
+.homeButtons {
+  text-align: center;
+}
+
+.homeButtons a:first-child {
+  padding-right: 40px;
+}
+
+.randomiseButtons {
+  text-align: center;
+}
+
+.reset {
+  width: 20%;
+  margin-left: 33px;
+  margin-top: -20px;
+}
+
+.logo {
+  margin-left: -1px;
+}
+
+.logoHome {
+  justify-content: center;
+}
+
+.oddsButton {
+  text-align: end;
+}
+
+.oddsButton button {
+  border: none;
+  color: transparent;
+}
+
+.results {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 30px;
+  margin-left: 30px;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 
 /* Loading Bar */
-/* 
-*, *::before, *::after {
+
+/* *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
@@ -68,40 +142,45 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .progressbar {
   position: relative;
   max-width: 500px;
   width: 100%;
-  margin: 30px auto 0;
-  height: 30px;
-  background: #0a0500;
+  margin: 72px auto 0;
+  height: 50px;
+  background: #ffffff25;
   overflow: hidden;
-} */
+  border-radius: 9px;
+}
 
-/* span.progress {
+.counter {
+  display: none;
+}
+
+span.progress {
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
-  width: 0; */
-  /* background: #12159e; */
-  /* background: repeating-linear-gradient(
-  45deg,
-  #db3208,
-  #19d308 10px,
-  #f75105 10px,
-  #1fe405 20px
+  width: 0;
+  background: #12159e;
+  background: repeating-linear-gradient(
+  -45deg,
+  red,
+  red 30px,
+  white 30px,
+  white 60px
   );
   transition: all .3s;
-} */
+}
 
 
 /* Candy cane loading bar */
 
-.bodyAnimate {
-  background-color: #fafafa;
+/* .bodyAnimate {
+  background-color: #fafafa00;
   animation: color 7200s linear 1;
 }
 .candyAnimate {
@@ -114,7 +193,7 @@ body {
   border-radius: 100px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  background-color: #fafafa;
+  background-color: #fafafa00;
   box-shadow: 40px 20px 15px -30px rgba(255, 0, 0, 0.1);
   transform: rotate(90deg);
   animation: PARTY 8s cubic-bezier(0.87, -0.41, 0.19, 1.44) 1;
@@ -130,10 +209,10 @@ body {
   background: #d33144;
   background: repeating-linear-gradient(45deg, #ffe, #ffe 15px, #d33144 15px, #d33144 30px);
   animation: load 8s ease-in 1;
-}
+} */
 .candyLoaderAnimate::after {
   content: "";
-  background-color: #fafafa;
+  background-color: #fafafa00;
   width: 50px;
   /* NEED TO ADJUST THIS TO WHATEVER SIZE THE SCREEN IS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   height: 230px; 
@@ -146,7 +225,7 @@ body {
 }
 .candyLoaderAnimate::before {
   content: "";
-  background-color: #fafafa;
+  background-color: #fafafa00;
   width: 25px;
     /* NEED TO ADJUST THIS TO WHATEVER SIZE THE SCREEN IS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   height: 180px;

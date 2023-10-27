@@ -8,21 +8,24 @@
 
 		<title>Crumble Randomiser</title>
 
+		<!-- preload background image and logo -->
+		<link rel="preload" href="assets/css/images/christmas-background-2.jpg" as="image">
+		<link rel="preload" href="assets/css/images/larrys-grandpas-crumbles-white.png" as="image">
+
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="assets/css/normalize.css">
 		<link rel="stylesheet" href="assets/css/style.css">
 
-		<link rel="icon" href="images/web-dev-favicon.png">
+		<link rel="icon" href="assets/css/images/web-dev-favicon.png">
 	</head>
 	<body>
-		<header>
-			<a href="odds.html"><img src="images/Larrys-logo.jpg.jpeg" alt="Larry's logo"></a>
-			<h1>Crumble randomiser</h1>
+		<header class="flex logoHome">
+			<img  src="assets/css/images/larrys-grandpas-crumbles-white.png" alt="Larry's logo">
 		</header>
 
-		<section>
-			<a href="all-random.html"><button>All Random</button></a>
-			<a href="vegan-random.html"><button>Vegan Random</button></a>
+		<section class="homeButtons">
+			<a href="all-random.html"><button>Random Crumble</button></a>
+			<a href="vegan-random.html"><button>Random Vegan Crumble</button></a>
 		</section>
 
 
