@@ -21,14 +21,14 @@ $('#veganRandomise, #allRandomise').click(function(){
 
       setTimeout( function() {
         counterInit( fValue, lValue )
-      }, 40 )
+      }, 10 )
 
     }
   
     setTimeout( function() {
       $(".progressbar").hide()
       $('.hidden').show()
-    }, 5125)
+    }, 1800)
 
   }
 

@@ -5,6 +5,7 @@
     	<meta name="description" content="Your description goes here">
     	<meta name="keywords" content="one, two, three">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="mobile-web-app-capable" content="yes">
 
 		<title>Vegan Randomiser</title>
 		
@@ -19,12 +20,12 @@
 		<!-- external JQUERY link -->
 		<script type="text/javascript" src="assets/js/jquery-3.7.1.min.js"></script>
 		
-		<link rel="icon" href="assets/css/images/web-dev-favicon.png">
+		<link rel="icon" href="assets/css/images/larrys-grandpas-crumbles-white.png">
 	</head>
 	<body>
 		<header class="flex">
 			<a class="reset" href="index.html"><button>Reset</button></a>
-			<img class="logo" src="assets/css/images/larrys-grandpas-crumbles-white.png" alt="Larry's logo">
+			<img class="logo smaller" src="assets/css/images/larrys-grandpas-crumbles-white.png" alt="Larry's logo">
 		</header>
 				
 		<!-- <section class="candy"> 
@@ -45,9 +46,9 @@
 
 		<section class="results">
 			<!-- <h2 id="result"></h2> -->
-			<button id="veganFruitResult" class="hidden"></button>
-			<button id="veganCrumbResult" class="hidden"></button>
-			<button id="veganToppingResult" class="hidden"></button>
+			<button id="veganFruitResult" class="hidden blinking"></button>
+			<button id="veganCrumbResult" class="hidden blinking"></button>
+			<button id="veganToppingResult" class="hidden blinking"></button>
 		</section>	
 
 		<section class="oddsButton">

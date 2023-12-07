@@ -28,6 +28,12 @@
 /******************************************
 /* BASE STYLES
 /*******************************************/
+@font-face {
+  font-family: sage;
+  src: url("Sage-Font/Sage.otf") format('opentype');
+  /* size-adjust: 150%; */
+  font-weight: normal;
+}
 
 body {
   background: #453025 url("images/christmas-background-2.jpg");
@@ -35,11 +41,17 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   /* background-size: 1349px 629px; */
+  font-family: sage;
+  font-weight: bold;
+  /* font-size: 40px; */
 }
-h1 {
-     color: black;
+h1, h2, label {
+     color: white;
 }
 
+h1 {
+  text-align: center;
+}
 
 
 
@@ -61,15 +73,15 @@ img {
 
 button {
   background-color: #ffffff00;
-  border: 2px solid #ffffff;
+  border: 3.5px solid #ffffff;
   border-radius: 5px;
   color: white;
-  padding: 15px 32px;
+  padding: 15px 23px;
   text-align: center;
-  font-size: 40px;
+  font-size: 39px;
   /* font-weight: ; */
   text-align: center;
-  margin-top: 58px;
+  margin-top: 50px;
 }
 
 .homeButtons {
@@ -82,6 +94,7 @@ button {
 
 .randomiseButtons {
   text-align: center;
+  margin-top: 15px;
 }
 
 .reset {
@@ -90,8 +103,19 @@ button {
   margin-top: -20px;
 }
 
+.reset button {
+  font-size: 25px;
+  padding: 10px 15px;
+}
+
 .logo {
+  width: 55%;
   margin-left: -1px;
+}
+
+.smaller {
+  width: 44%;
+  margin-left: 72px;
 }
 
 .logoHome {
@@ -105,13 +129,47 @@ button {
 .oddsButton button {
   border: none;
   color: transparent;
+  margin-top: 113px;
 }
 
 .results {
   display: flex;
   justify-content: space-evenly;
-  margin-right: 30px;
-  margin-left: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#fruitResult, #crumbResult, #toppingResult {
+  padding: 15px 15px;
+}
+
+#fruitSubmit, #crumbSubmit, #toppingSubmit, .home {
+  border: 2px solid white;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 20px;
+}
+.home {
+  text-align: center;
+  margin-top: 0;
+}
+.oddsSection {
+  margin: 0 0 0 10px;
+}
+
+.blinking {  
+  border: 3.5px solid white;
+  border-radius: 5px;
+  animation-name: blinking;
+  animation-duration: 0.65s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blinking {
+  50% {
+    border-color: rgb(252, 171, 171);
+  }
 }
 
 /******************************************

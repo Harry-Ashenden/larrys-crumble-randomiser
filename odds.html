@@ -5,31 +5,31 @@
     	<meta name="description" content="Your description goes here">
     	<meta name="keywords" content="one, two, three">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<title>Odds page</title>
+		<meta name="mobile-web-app-capable" content="yes">
+		
+		<title>Odds</title>
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="assets/css/normalize.css">
 		<link rel="stylesheet" href="assets/css/style.css">
 
-		<link rel="icon" href="assets/css/images/web-dev-favicon.png">
+		<link rel="icon" href="assets/css/images/larrys-grandpas-crumbles-white.png">
 	</head>
 	<body>
 		<header>
-			<h1>Odds input</h1>
+			<h1>Odds Input</h1>
 		</header>
 
 		<!-- Fruit -->
-		<section>
-			<h2>Fruit Odds</h2>
+		<section class="oddsSection">
 			<form>
-				<label for="apple"> Apple: </label>
+				<label for="apple"> Apple:</label>
 				<input id="apple" type="number" placeholder="odds here">
 
 				<label for="rhubarb"> Rhubarb: </label>
 				<input id="rhubarb" type="number" placeholder="odds here">
 
-				<label for="peachAndCinnamon"> Peach and Cinnamon: </label>
+				<label for="peachAndCinnamon"> Peach: </label>
 				<input id="peachAndCinnamon" type="number" placeholder="odds here">
 
 				<label for="mincePie"> Mince Pie: </label>
@@ -37,7 +37,7 @@
 			</form>
 
 			<input type="checkbox" id="fruitDefault" name="fruitDefault" value="ticked">
-			<label for="fruitDefault"> Tick for default fruit odds</label>
+			<label for="fruitDefault">Default fruit odds</label>
 
 			<button id="fruitSubmit" type="button" name="button">Submit Fruit Odds</button>
 
@@ -47,10 +47,9 @@
 
 
 		<!-- Crumb -->
-		<section>
-			<h2>Crumb Odds</h2>
+		<section class="oddsSection">
 			<form>
-				<label for="tradCrumble"> Traditional Crumble: </label>
+				<label for="tradCrumble"> Traditional Crumb: </label>
 				<input id="tradCrumble" type="number" placeholder="odds here">
 
 				<label for="granola"> Granola: </label>
@@ -58,7 +57,7 @@
 			</form>
 
 			<input type="checkbox" id="crumbDefault" name="crumbDefault" value="ticked">
-			<label for="crumbDefault"> Tick for default crumb odds</label>
+			<label for="crumbDefault"> Default crumb odds</label>
 
 			<button id="crumbSubmit" type="button" name="button">Submit Crumb Odds</button>
 
@@ -66,8 +65,7 @@
 		</section>
 
 		<!-- Toppings -->
-		<section>
-			<h2>Topping Odds</h2>
+		<section class="oddsSection">
 			<form>
 				<label for="custard"> Custard: </label>
 				<input id="custard" type="number" placeholder="odds here">
@@ -77,14 +75,14 @@
 			</form>
 
 			<input type="checkbox" id="toppingDefault" name="toppingDefault" value="ticked">
-			<label for="toppingDefault"> Tick for default topping odds</label>
+			<label for="toppingDefault"> Default topping odds</label>
 
 			<button id="toppingSubmit" type="button" name="button">Submit Topping Odds</button>
 
 			<h2 id="toppingSuccessMessage"></h2>
 		</section>
 
-		<a href="index.html"><button>Home</button></a>
+		<a class="flex" href="index.html"><button class="home">Home</button></a>
 
 		
 		<script type="text/javascript" src="assets/js/odds.js"></script>

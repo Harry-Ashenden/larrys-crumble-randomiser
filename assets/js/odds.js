@@ -1,13 +1,13 @@
 //Ingredients lists
 let fruit = [
-  ["Apple", 50],
+  ["Apple and Cinnamon", 50],
   ["Rhubarb", 20],
-  ["Peach and Cinnamon", 20],
+  ["Peach and Nutmeg", 20],
   ["Mince Pie", 10],
 ]
 
 let crumb = [
-  ['Traditional Crumble', 50],
+  ['Traditional Crumb', 50],
   ['Granola', 50],
 ]
 
@@ -37,9 +37,9 @@ function fruitOdds() {
 
     // Updating 2d fruit array and adding to local storage
     fruit = [
-      ["Apple", 25],
+      ["Apple and Cinnamon", 25],
       ["Rhubarb", 25],
-      ["Peach and Cinnamon", 25],
+      ["Peach and Nutmeg", 25],
       ["Mince Pie", 25],
     ]
 
@@ -64,9 +64,9 @@ function fruitOdds() {
 
       // Updating the fruit 2d array to contain inputted odds
       fruit = [
-        ["Apple", appleValue],
+        ["Apple and Cinnamon", appleValue],
         ["Rhubarb", rhubarbValue],
-        ["Peach and Cinnamon", peachAndCinnamonValue],
+        ["Peach and Nutmeg", peachAndCinnamonValue],
         ["Mince Pie", mincePieValue],
       ]
 
@@ -77,7 +77,7 @@ function fruitOdds() {
       localStorage.setItem("Fruit Odds", fruitStorage)
 
       // Adding success message if odds add up to 100
-      document.querySelector('#fruitSuccessMessage').innerText = `Odds updated Apple: ${appleValue}, Rhubarb: ${rhubarbValue}, Peach and Cinnamon; ${peachAndCinnamonValue}, Mince Pie: ${mincePieValue}`
+      document.querySelector('#fruitSuccessMessage').innerText = `Odds updated Apple and Cinnamon: ${appleValue}, Rhubarb: ${rhubarbValue}, Peach and Nutmeg; ${peachAndCinnamonValue}, Mince Pie: ${mincePieValue}`
 
       // Error message when odds do not equal 100
     } else {
@@ -100,7 +100,7 @@ function crumbOdds() {
 
     // Updating the crumb 2d array to contain default odds
     let crumb = [
-      ['Traditional Crumble', 50],
+      ['Traditional Crumb', 50],
       ['Granola', 50],
     ]
     
@@ -125,7 +125,7 @@ function crumbOdds() {
 
       // Updating the fruit 2d array to contain inputted odds
       let crumb = [
-        ['Traditional Crumble', tradCrumbleValue],
+        ['Traditional Crumb', tradCrumbleValue],
         ['Granola', granolaValue],
       ]
 
@@ -136,7 +136,7 @@ function crumbOdds() {
       localStorage.setItem("Crumb Odds", crumbStorage)
 
       // Adding success message if odds add up to 100
-      document.querySelector('#crumbSuccessMessage').innerText = `Odds updated Traditional Crumble: ${tradCrumbleValue}, Granola: ${granolaValue}`
+      document.querySelector('#crumbSuccessMessage').innerText = `Odds updated Traditional Crumb: ${tradCrumbleValue}, Granola: ${granolaValue}`
 
       // Error message when odds do not equal 100
     } else {
