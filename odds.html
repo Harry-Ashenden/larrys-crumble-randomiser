@@ -2,12 +2,12 @@
 <html lang="en">
 	<head>
     	<meta charset="utf-8">
-    	<meta name="description" content="Your description goes here">
-    	<meta name="keywords" content="one, two, three">
+    	<meta name="description" content="Crumble randomiser">
+    	<meta name="keywords" content="Grandpas crumble">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="mobile-web-app-capable" content="yes">
-		
-		<title>Odds</title>
+
+		<title>Crumble Randomsier Odds</title>
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="assets/css/normalize.css">
@@ -22,6 +22,7 @@
 
 		<!-- Fruit -->
 		<section class="oddsSection">
+			<!-- Odds input -->
 			<form>
 				<label for="apple"> Apple:</label>
 				<input id="apple" type="number" placeholder="odds here">
@@ -36,12 +37,14 @@
 				<input id="mincePie" type="number" placeholder="odds here">
 			</form>
 
+			<!-- Default odds tickbox -->
 			<input type="checkbox" id="fruitDefault" name="fruitDefault" value="ticked">
 			<label for="fruitDefault">Default fruit odds</label>
 
+			<!-- Submit button -->
 			<button id="fruitSubmit" type="button" name="button">Submit Fruit Odds</button>
 
-
+			<!-- Confirmation message -->
 			<h2 id="fruitSuccessMessage"></h2>
 		</section>
 
@@ -84,9 +87,7 @@
 
 		<a class="flex" href="index.html"><button class="home">Home</button></a>
 
-		
+		<!-- Scritps -->
 		<script type="text/javascript" src="assets/js/odds.js"></script>
-		<script type="text/javascript" src="assets/js/all.js"></script>
-		<script type="text/javascript" src="assets/js/vegan.js"></script>
 	</body>
 </html>

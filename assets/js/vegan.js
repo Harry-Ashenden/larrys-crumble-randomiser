@@ -1,6 +1,3 @@
-// creates a sleep function in js
-const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
-
 //Random percent generator 1-100%
 function percentGenerator(num) {
   return Math.round(Math.ceil(Math.random() * num + (num > 0 ? 1 : 0)) - 1)
@@ -48,21 +45,3 @@ const veganResults = async () => {
 //Runs the crumbleRandomiser function on click of the button, has timeout to delay function from running until the candy cane laoding bar is complete
 document.querySelector('#veganRandomise').addEventListener('click', veganResults)
 
-
-// SPINNING WHEEL
-
-function myfunction(){
-
-	var x = 1024; //min value
-	var y = 9999; // max value
-
-	var deg = Math.floor(Math.random() * (x - y)) + y;
-
-	document.getElementById('box').style.transform = "rotate("+deg+"deg)";
-
-	var element = document.getElementById('mainbox');
-	element.classList.remove('animate');
-	setTimeout(function(){
-		element.classList.add('animate');
-	}, 5000); //5000 = 5 second
-}

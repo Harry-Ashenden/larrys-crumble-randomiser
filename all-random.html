@@ -2,12 +2,12 @@
 <html lang="en">
 	<head>
     	<meta charset="utf-8">
-    	<meta name="description" content="Your description goes here">
-    	<meta name="keywords" content="one, two, three">
+    	<meta name="description" content="Crumble randomiser">
+    	<meta name="keywords" content="Grandpas crumble">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="mobile-web-app-capable" content="yes">
 
-		<title>All Randomiser</title>
+		<title>Crumble Randomsier All</title>
 
 		<!-- preload background image -->
 		<link rel="preload" href="assets/css/images/christmas-background-2.jpg" as="image">
@@ -23,15 +23,18 @@
 		<link rel="icon" href="assets/css/images/larrys-grandpas-crumbles-white.png">
 	</head>
 	<body>
+		<!-- Reset button to take to home -->
 		<header class="flex">
 			<a class="reset" href="index.html"><button>Reset</button></a>
 			<img class="logo smaller" src="assets/css/images/larrys-grandpas-crumbles-white.png" alt="Larry's logo">
 		</header>
 
+		<!-- Randomise button -->
 		<section class="randomiseButtons">
 			<button id="allRandomise" type="button" name="allRandomise">Random Crumble</button>
 		</section>
 
+		<!-- Loading bar -->
 		<section>
 			<div class="counter">0</div>
 			<div class="progressbar">
@@ -39,16 +42,15 @@
 			</div>
 		</section>
 
+		<!-- Results -->
 		<section class="results">
 			<button id="fruitResult" class="hidden blinking"></button>
 			<button id="crumbResult" class="hidden blinking"></button>
 			<button id="toppingResult" class="hidden blinking"></button>
 		</section>	
 
-		
-		<script type="text/javascript" src="assets/js/odds.js"></script>
+		<!-- Scritps -->
 		<script type="text/javascript" src="assets/js/all.js"></script>
-		<script type="text/javascript" src="assets/js/vegan.js"></script>
 		<script type="text/javascript" src="assets/js/animations.js"></script>
 	</body>
 </html>

@@ -3,7 +3,6 @@ function percentGenerator(num) {
   return Math.round(Math.ceil(Math.random() * num + (num > 0 ? 1 : 0)) - 1)
   }
 
-
 //Rigged randomiser function
 function chance(arr) {
     // Checks for percentages to add up to 100 in array
